@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta name="veiwport" content="width=device-width, initial-scale=1">
+<link href="CSS/style.css" type="text/css" rel="stylesheet">
+<script src="Java/functions.js"></script>
+<meta charset="utf-8">
+<title>Bookings</title>
+</head>
+<!-- 
+The Bookings page has:
+- Clickable logo that is made from photoshop
+- Navigation menu
+- Title dropdown list for Ms, Mr, Mrs
+- User's First name
+- User's Last name
+- User's Email address
+- User's Contact number
+- Room Type dropdown list
+- No of Rooms dropdown list
+- two drop downlist for both Adult and Children
+- Start and end dates of the reservation period
+- estimated time of arrival as this only becomes visivle after the user has entered the start and end date
+- A checkbox for whether breakfast is needed
+- A total displaying the total cost of everything
+- A cofirm button
+- A Reset button that resets all data on the page
+- Comments
+-->
+
+<body>	
+<!-- Navigation Menu-->
+	<div class="nav1">
+<div class="logoclass">
+<a href="Home.html" style="padding: 0; margin: 0; border: 0;"> <img id="logo" src="PhotoShop/HomeLogo.jpg" alt="logo" ></a>
+	</div>
+  <a href="Home.html">Home</a>
+  <div class="dropdown">
+    <button class="dropbut">Room Types
+      <i class="index"></i>
+    </button>
+    <div class="dropdown-content">
+		<a href="RoomTypes.html">Room Types</a>
+      <a href="RoomTypes.html#Studio">Studio Unit</a>
+      <a href="RoomTypes.html#2bedroom">2 Bed Room Unit</a>
+      <a href="RoomTypes.html#1bedroom">1 Bed Room Unit</a>
+    </div>
+  </div>
+	<a href="Bookings.html">Bookings</a>
+	<a href="Aboutus.html">About Us</a>
+<div class="dropdown">
+	<button class="dropbut">First Time
+		<i class="index"></i>
+	</button>
+	<div class="dropdown-content">
+		<a href="FirstTime.html">Things to do</a>
+		<a href="FirstTime.html#lake">The Lake</a>
+		<a href="FirstTime.html#garden">The Gardens</a>
+		<a href="FirstTime.html#zoo">The Zoo</a>
+		<a href="FirstTime.html#museum">The Museum</a>
+	</div>
+	</div>
+	</div>
+	
+	<div>
+<!-- Personal information Form-->
+	<form>
+		<div class="PersonalInfo">
+			<h2 class="headers">Personal Information</h2>
+			<div class="bookspace">
+				<label for="titleDropList">Title</label>
+				<select id="titleDropList" class="titleDropList">
+				<option value="--" disabled selected>--</option>
+				<option value="mr">Mr.</option>
+				<option value="ms">Ms.</option>
+				<option value="mrs">Mrs.</option>
+				</select>
+			</div>
+			
+			<div class="bookspace">
+				<label for="firstname">First Name</label>
+				<input class="guestInfoTextBox" type="text" id="firstname" placeholder=" First Name">
+			</div>
+			<div class="bookspace">
+				<label for="lastname">Last Name</label>
+				<input class="guestInfoTextBox" type="text" id="lastname" placeholder=" Last Name">
+			</div>
+			<div class="bookspace">
+				<label for="email">Email</label>
+				<input class="guestInfoTextBox" type="email" id="email" placeholder=" Email">
+			</div>
+			<div class="bookspace">
+				<label for="phoneNo">Contact Number</label>
+				<input class="guestInfoTextBox" type="text" id="phoneNo" placeholder=" Phone Number">
+			</div>
+		</div>
+		</form>
+<!-- Booking Information form-->
+	<form>
+		<div class="BookingInfo">
+			<h2 class="headers">Booking Information</h2>
+			<div class="column">
+				<div class="bookspace">
+				<label for="roomType">Room Type</label>
+				<!-- oninput runs script from java script to update the price-->
+				<select oninput = "updatePrice()" id="roomType">
+					<option value="" id="chooseRoom">&nbsp;</option>
+					<option value="150">Studio Unit</option>
+					<option value="120">2 Bed Room Unit</option>
+					<option value="90">1 Bed Room unit</option>
+				</select>
+				</div>
+				<div class="bookspace">
+				<label for="noAdults">Adults</label>
+				<select oninput = "updatePrice();" class="numberDropList" id="noAdults">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+				</select>
+				</div>
+				<div class="bookspace">
+				<label for="startDate">Start Date</label><br>
+				<input id="startDate" oninput="dateInput(); updatePrice();" type="date" class="stayDate" name="StartDate">
+				</div>
+				<div class="bookspace">
+				<div class="customCheckBox">
+					<label for="breakfast">Breakfast Needed?<br> ($20 Per night)</label>
+					<input type="checkbox" onclick="updatePrice();" id="breakfast">
+				</div>
+				</div>
+			
+			</div>
+			<div class="column">
+				<div class="bookspace">
+				<label for="noRooms">Number of Rooms</label>
+				<select oninput = "updatePrice()" id="noRooms" class="numberDropList">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+				</select><br>
+				</div>
+				<div class="bookspace">
+				<label for="noChildren">Children</label>
+				<select oninput = "updatePrice();" class="numberDropList" id="noChildren">
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+				</select>
+				</div>
+				<div class="bookspace">
+				<label for="endDate">End Date</label><br>
+				<!-- oninput checks the date that is inputed is valid by calling the dateinput function-->
+				<input id="endDate" oninput="dateInput(); updatePrice();" type="date" class="stayDate" name="endDate">
+				</div>
+				<div class="bookspace">
+				<label id="ETALabel" for="ETA">Estimated time of arrival</label><br>
+				<!-- This is only Visable if the user has entered in both the dates as the script enables it once the user has-->
+				<input id="ETA" type="time" class="stayDate" value="16:00:00">
+				<!-- If the date input is not valid then the function will display this message-->
+					<p id="errorMessage">Please enter a valid date.</p>
+				</div>
+			</div>
+		</div>
+		</form>
+		<!-- Shows realtime total(after both dates have been selected-->
+		<div id="totalPrice" class="PersonalInfo">
+			<h3 id="yourStayTotal"> Total: </h3>
+			<h3 id="yourStayPrice">NZD $</h3>
+		</div>
+		<div class="bookingButtons">
+			<button style="background-color:deepskyblue;margin-right:20px;" class="bookbutton" type="submit">Confirm</button>
+			<!-- Resets the bookings page, added style to keep style.css cleaner-->
+			<button style="background-color:#f44336;" class="bookbutton" type="button" onclick="resetInfo()">Reset</button>
+		</div>
+	</div>
+	
+<footer>
+	<h3 class="homesubhead">Copyright</h3>
+</footer>	
+
+</body>
+	
+
+</html>

@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="veiwport" content="width=device-width, initial-scale=1">
+<link href="CSS/style.css" type="text/css" rel="stylesheet">
+<script src="Java/functions.js"></script>
+<meta charset="utf-8">
+<title>Aboutus</title>
+</head>
+<!-- 
+The About us Page has:
+- Clicable logo that was made with photoshop
+- Navigation Menu
+- Comments
+- Contains information for the bussiness
+- Google maps that shows the physical location of the business
+- Phone no
+- Email
+- Fax
+- Links to socail web pages
+- Contact us form
+-->
+
+<body>
+<!-- Clickable Logo-->
+<!-- Navigation menu-->
+	<div class="nav1">
+<div class="logoclass">
+<a href="Home.html" style="padding: 0; margin: 0; border: 0;"> <img id="logo" src="PhotoShop/HomeLogo.jpg" alt="logo" ></a>
+	</div>
+  <a href="Home.html">Home</a>
+  <div class="dropdown">
+    <button class="dropbut">Room Types
+      <i class="index"></i>
+    </button>
+    <div class="dropdown-content">
+		<a href="RoomTypes.html">Room Types</a>
+      <a href="RoomTypes.html#Studio">Studio Unit</a>
+      <a href="RoomTypes.html#2bedroom">2 Bed Room Unit</a>
+      <a href="RoomTypes.html#1bedroom">1 Bed Room Unit</a>
+    </div>
+  </div>
+	<a href="Bookings.html">Bookings</a>
+	<a href="Aboutus.html">About Us</a>
+<div class="dropdown">
+	<button class="dropbut">First Time
+		<i class="index"></i>
+	</button>
+	<div class="dropdown-content">
+		<a href="FirstTime.html">Things to do</a>
+		<a href="FirstTime.html#lake">The Lake</a>
+		<a href="FirstTime.html#garden">The Gardens</a>
+		<a href="FirstTime.html#zoo">The Zoo</a>
+		<a href="FirstTime.html#museum">The Museum</a>
+</div>
+		</div>
+	</div>
+
+<!-- Information about bussiness-->	
+<div class="AboutusInfo">
+	
+	<div class="column">
+	<h2 class="headers">Information</h2><br>
+	<h3 >Address</h3>
+	<p>3771 Waikokowai, Waikato, New Zealand</p> <br>
+	
+	<h3>Phone Number</h3>
+	<p>(07) 7514234</p> <br>
+	
+	<h3>Email / Fax</h3>
+	<p>businessname@gmail.com</p>
+	<p> +64 5345 3424</p><br>
+	
+	<h3>Social Links</h3>
+		<ul>
+		<li><a href="#">https://www.facebook/bussiness</a><br><br></li>
+		<li><a href="#">https://www.twitter/bussines</a><br><br></li>
+		<li><a href="#">https://www.instagram/business</a><br><br></li>
+		</ul>
+	</div>
+<!-- Map displaying physical location-->	
+	<div class="column" id="map">
+	 <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d3549.131066712156!2d175.03154708288324!3d-37.5805891867203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e2!4m0!4m5!1s0x6d6d3687e9be190f%3A0x500ef6143a2d890!2sWaikokowai%2C%203771!3m2!1d-37.5724352!2d175.0594581!5e0!3m2!1sen!2snz!4v1586815755068!5m2!1sen!2snz" width="600" height="450" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+	</div>
+		
+</div>
+<form>
+<!-- Contact us form-->
+  <div Class="ContactInfo">
+		<h3 class="headers">Contact Us</h3>
+		
+		<p>If you have any Questions, Comments or would like to know more, Please send us a message by filling out the form below</p><br>
+		
+		<label for="c_fname">Your Name</label><br>
+		<input type="text" id="c_fname" placeholder=" Your Name"><br><br>
+		
+		<label for="c_email">Email Adress</label><br>
+		<input type="email" id="c_email" placeholder=" Email Adress"><br><br>
+		
+		<label for="c_message">Message</label><br>
+	  <textarea id="c_message" placeholder=" Message"></textarea>
+	  
+	  		<div class="bookingButtons">
+			<button style="background-color:deepskyblue;margin-right:20px; margin-top: 20px;" class="bookbutton" type="submit">Send</button>
+		
+	  </div>
+	
+	</div>
+</form>
+	
+<footer>
+	<h3 class="homesubhead">Copyright</h3>
+</footer>	
+	
+</body>
+	
+
+
+</html>
+

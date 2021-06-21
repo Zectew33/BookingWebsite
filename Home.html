@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Home</title>
+<meta name="veiwport" content="width=device-width, initial-scale=1" >
+<meta charset="utf-8">
+<!-- Links the styles from CSS-->
+<link href="CSS/style.css" type="text/css" rel="stylesheet">
+</head>	
+	
+<!-- 
+The Home Page Has:
+- Logo that is a clickable Link(Made from Photoshop)
+- Banner with Text over top
+- Navigation Menu with Links to all pages including 2 dropdown lists for Room types and First Time(Things to do) that take to to the specific part of the pages
+- Text describing the business and its services
+- Text describing how to reach the motel
+- Other Content like social links and more filler content on the page
+- Comments
+- Added styles in some parts of the html to make the styles.css cleaner
+-->
+	
+<body>
+	<!--Navigation Menu with 2 dropdowns-->
+	<div class="nav1">
+	<div class="logoclass">
+<a href="Home.html" style="padding: 0; margin: 0; border: 0;"> <img id="logo" src="PhotoShop/HomeLogo.jpg" alt="logo" ></a>
+	</div>
+  <a href="Home.html">Home</a>
+  <div class="dropdown">
+    <button class="dropbut">Room Types
+      <i class="index"></i>
+    </button>
+    <div class="dropdown-content">
+		<a href="RoomTypes.html">Room Types</a>
+      <a href="RoomTypes.html#Studio">Studio Unit</a>
+      <a href="RoomTypes.html#2bedroom">2 Bed Room Unit</a>
+      <a href="RoomTypes.html#1bedroom">1 Bed Room Unit</a>
+    </div>
+  </div>
+	<a href="Bookings.html">Bookings</a>
+	<a href="Aboutus.html">About Us</a>
+<div class="dropdown">
+	<button class="dropbut">First Time
+		<i class="index"></i>
+	</button>
+	<div class="dropdown-content">
+		<a href="FirstTime.html">Things to do</a>
+		<a href="FirstTime.html#lake">The Lake</a>
+		<a href="FirstTime.html#garden">The Gardens</a>
+		<a href="FirstTime.html#zoo">The Zoo</a>
+		<a href="FirstTime.html#museum">The Museum</a>
+</div>
+		</div>
+	</div>
+<!-- Title with background set as image -->
+<div class="homepic">
+		<h1 id="h1">Explore</h1>
+		<h1 id="h2">Where It Happens</h1>
+	
+</div>
+<!-- Description about the motel -->
+<!-- 2 Columns for content-->
+<div class="homebody">
+	<div class="column">
+		<div class="hometext">
+			<h2 class="homesubhead">Our Story</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam varius fringilla tempor. Curabitur mollis imperdiet maximus. Sed varius lobortis mauris, nec ultrices nibh aliquet eget. Maecenas vel placerat justo. Aliquam sit amet erat massa. Sed eu tempor lectus. Quisque dapibus, felis sed posuere convallis, nunc velit molestie turpis, et ultricies odio mauris sed arcu. Integer porttitor efficitur turpis, vel sodales arcu aliquam ut. Vestibulum nisl dui, tempor quis elit volutpat, iaculis scelerisque sem.</p><br>
+			
+			<p>Integer nec accumsan sem. Proin sit amet pretium dui, nec tincidunt eros. Morbi hendrerit suscipit tortor, ac fermentum massa tincidunt eget. Cras id laoreet tellus. Ut vitae libero sed elit porta feugiat id at tellus. Suspendisse felis massa, efficitur vitae rhoncus nec, elementum vitae ligula. Fusce aliquet porta mauris id sodales. Aliquam volutpat, dolor et interdum porta, metus risus gravida purus, at pulvinar ipsum dui sed odio. Mauris ut purus sagittis, viverra metus sit amet, ultricies ligula. Vivamus porta nulla dapibus, mollis nunc at, finibus eros.</p><br>
+		</div>
+		
+<!--Steps on getting the the motel location -->
+		<div class="hometext">
+			<h2 class="homesubhead">How To Get To Us</h2>
+			<p>Lost? Need Directions? If you are Travelling from <a href="#">Hamilton</a>, Find Route 1 and head towards <a href="#">Te Rapa</a>. If you are heading that way you should be heading towards Auckland. When you get to the Highway bridge just before <a href="#">Taupiri</a> make a turn onto Route 18. Keep going then once you make it to the Tainui Bridge, take a left and drive over it. Then follow the road until you get to <a href="#">Waikokowai</a>.<br><br>
+			If you are travelling from <a href="#">Auckland</a>, Drive south on Route 1 Highway towards <a href="#">Hamilton</a>. Keep Following the Route 1 highway until you get to <a href="#">Rangiriri</a>. Then on the roundabout take the 3rd exit onto Flen Murray Rd and follow that road until Rotongaro Rd. If you remain on this road driving south then you will find Waikokowai Rd and when you follow that you will end up at <a href="#">Waikokowai</a> </p>
+			
+			<p>There is also a map to our location on the <a href="Aboutus.html">About us Page</a>.</p>
+		
+		</div>
+	
+	</div>
+
+	
+<!-- Slide Show Column -->
+	<div class="column">
+<div class="container">
+
+<!-- Pictures 1/4 -->
+  <div class="mySlides">
+    <div class="numbertext">1 / 4</div>
+      <img src="Pictures/Garden.jpg" alt="home" style="width:100%;max-height:500px" class="piccenter">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 4</div>
+      <img src="Pictures/Lake.jpg" alt="home" style="width:100%;max-height:500px"  class="piccenter">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 4</div>
+      <img src="Pictures/slide.jpg" alt="home" style="width:100%;max-height:500px"  class="piccenter">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 4</div>
+      <img src="Pictures/Zoo.jpg" alt="home" style="width:100%;max-height:500px"  class="piccenter">
+  </div>
+
+<!-- Buttons to go next or back-->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+ 
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+<!-- Thumbnail Pictures-->
+  <div class="row">
+    <div class="column2">
+      <img class="demo cursor" src="Pictures/Garden.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Gardens">
+    </div>
+    <div class="column2">
+      <img class="demo cursor" src="Pictures/Lake.jpg" style="width:100%" onclick="currentSlide(2)" alt="The Lake">
+    </div>
+    <div class="column2">
+      <img class="demo cursor" src="Pictures/slide.jpg" style="width:100%;height:100%" onclick="currentSlide(3)" alt="Nature">
+    </div>
+    <div class="column2">
+      <img class="demo cursor" src="Pictures/Zoo.jpg" style="width:100%" onclick="currentSlide(4)" alt="The Zoo">
+		</div>
+    </div>
+  </div>
+</div>
+</div>
+<!--More Description about motel -->	
+<div class="homebody">
+<div class="column1" style="height:320px;padding:20px;background-color:#bbb">
+
+	<h2>Enjoy your stay</h2>
+	<p>By choosing 1 out of 3 units in our stay, you can adventure out and learn new experiences and memerioes  by visiting locations you have never seen</p>
+	
+
+	</div>
+<!-- Motel services-->	
+<div class="column1" style="height:320px;padding:20px;background-color:#ccc">
+	
+		<h2>Our Services</h2>
+	<p>As metion before we have 3 units you can choose from:</p>
+	<ul>
+		<li>1 BedRoom Unit<br><br></li>
+		<li>2 BedRoom Unit<br><br></li>
+		<li>Studio Unit<br><br></li>
+		
+		</ul>	
+
+</div>
+<!-- Things to do around the city-->
+	<div class="column1" style="height:320px;padding:20px;background-color:#ddd">
+	
+	<h2>Things to do</h2>
+		<p>There are many things that you can visit and see:</p>
+		<ul>
+			<li>The Lake<br><br></li>
+			<li>The Gardens<br><br></li>
+			<li>The Zoo<br><br></li>
+			<li>The Museum and ArtPost<br><br></li>
+		
+		</ul>
+	
+
+	</div>
+<!-- Social Links-->	
+	<div class="column1" style="height:320px;padding:20px;background-color:#eee">
+
+		
+		<h2>Social Links</h2>
+		
+		<ul>
+		<li><a href="#">https://www.facebook/bussiness</a><br><br></li>
+		<li><a href="#">https://www.twitter/bussines</a><br><br></li>
+		<li><a href="#">https://www.instagram/business</a><br><br></li>
+		</ul>
+
+	
+	
+	</div>
+	
+</div>
+<!-- Runs the script for the slideshow from javascript-->	
+<script src="Java/functions.js"></script>
+
+<footer>
+	<h3 class="homesubhead">Copyright</h3>
+</footer>
+	
+	
+</body>
+
+</html>
